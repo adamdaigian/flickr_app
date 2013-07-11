@@ -6,6 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'bootstrap-sass'
+gem 'haml'
+gem 'sorcery'
 
 group :development do
   gem 'annotate'

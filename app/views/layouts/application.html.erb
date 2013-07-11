@@ -7,8 +7,59 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Flickr</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active">
+                  <a href="./index.html">Home</a>
+                </li>
+                <li class="">
+                  <a href="">Home</a>
+                </li>
+                <li class="">
+                  <a href="/albums">Albums</a>
+                </li>
+                <li class="">
+                  <a href="/photos">Photos</a>
+                </li>
+                <li class="">
+                  <a href="/albums/new">New Album</a>
+                </li>
+                <li class="">
+                  <a href="/photos/new">New Photo</a>
+                </li>
+                <li class="">
+                  <a href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<%= yield %>
+  <div class="jumbotron masthead">
+    <div class="container">
+      <h1>Flickr</h1>
+
+    </div>
+  </div>
+<div class="container">
+  <div class="marketing">
+    <div class="row-fluid">
+      <div class="span10">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
