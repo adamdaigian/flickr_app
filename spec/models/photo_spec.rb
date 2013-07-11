@@ -12,5 +12,8 @@
 require 'spec_helper'
 
 describe Photo do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "belongs to an album" do
+    album = FactoryGirl.create(:album)
+    picture = Picture.create()
+    album.
 end

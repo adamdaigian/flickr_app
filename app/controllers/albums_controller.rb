@@ -15,7 +15,7 @@ class AlbumsController < ApplicationController
   def new
     @album = Album.new
 
-    rrespond_to do |format|
+    respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @album }
     end

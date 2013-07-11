@@ -1,6 +1,11 @@
 class PhotosController < ApplicationController
   def index
     @photos = Photo.all
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @photo }
+    end
   end
 
   def show
@@ -15,7 +20,7 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
 
-    rrespond_to do |format|
+    respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @photo }
     end

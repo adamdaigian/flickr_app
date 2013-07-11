@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
+<%= @photo.name %>
+<%= image_tag @photo.image %>
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

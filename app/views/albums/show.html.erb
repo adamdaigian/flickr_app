@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
+<h1><%= @album.name %></h1>
 
+<% @album.photos.each do |photo| %>
+<div class=""><%= image_tag photo.image %></div>
+
+<% end %>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>
+

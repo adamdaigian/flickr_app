@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Photos:</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +10,8 @@
 
 <% @photos.each do |photo| %>
   <tr>
+    <td><%= photo.name %></td>
+   <<td><%= image_tag photo.image  %></td>
     <td><%= link_to 'Show', photo %></td>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
     <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
