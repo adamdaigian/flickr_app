@@ -1,5 +1,36 @@
-<h1>New photo</h1>
+<div class="offset3 hero-unit span6 offset3">
+<h1>New Photo</h1>
+<hr class="soften">
+<%= form_for(@photo, :html_options => {:multipart => true}) do |f| %>
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
 
-<%= render 'form' %>
+      <ul>
+      <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= link_to 'Back', photos_path %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :album_id %>
+    <%= f.collection_select(:album_id, Album.all, :id, :name, {:prompt => "select album"}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

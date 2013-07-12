@@ -1,5 +1,6 @@
+<div class="offset3 hero-unit span6 offset3">
 <h1>Login</h1>
-
+<hr class="soften">
 <%= form_tag sessions_path do %>
 
 <div class="field">
@@ -21,5 +22,7 @@
 <%= check_box_tag :remember_me, 1, params[:remember_me] %>
 <%= label_tag :remember_me %>
 </div>
-<div class="action"><%= sumbit_tag "Log in" %></div>
+<div class="btn btn-large btn-info"><%= submit_tag "Log in" %>
+</div>
 <% end %>
+</div>

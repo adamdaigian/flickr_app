@@ -51,7 +51,16 @@
 
   <div class="jumbotron masthead">
     <div class="container">
-      <h2>Flickr</h2>
+      <h1>Welcome to Flickr!</h1>
+      <div class="row-fluid">
+    <div class="offset2 span4">
+      <a href="/sessions/new"><div class="btn btn-large btn-info">Log In</div></a>
+    </div>
+    <div class="offset2 span4">
+      <a href="/users/new"><div class="btn btn-large btn-info">Sign Up</div></a>
+    </div>
+
+    </div>
         <div class="span4"><% flash.each do |name, msg| %>
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
           <% end %>
@@ -62,11 +71,6 @@
   <div class="marketing">
     <div class="row-fluid">
       <div class="span12">
-  
-          
-        </div>
-        <%= yield %>
-      </div>
     </div>
   </div>
 </div>
